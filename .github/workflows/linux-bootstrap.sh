@@ -28,14 +28,14 @@ ln -sf /usr/bin/ld.lld-15 /usr/bin/ld
 ln -sf /usr/bin/clang-15 /usr/bin/clang
 ln -sf /usr/bin/clang++-15 /usr/bin/clang++
 curl -sO https://cdn.cryptiiiic.com/bootstrap/linux_fix.tar.zst &
-curl -sO https://cdn.cryptiiiic.com/deps/static/Linux/x86_64/Linux_x86_64_1677480132_Release.tar.zst &
-curl -sO https://cdn.cryptiiiic.com/deps/static/Linux/x86_64/Linux_x86_64_1677480132_Debug.tar.zst &
+curl -sO https://cdn.cryptiiiic.com/deps/static/Linux/x86_64/Linux_x86_64_1741248292_Release.tar.zst &
+curl -sO https://cdn.cryptiiiic.com/deps/static/Linux/x86_64/Linux_x86_64_1741248292_Debug.tar.zst &
 curl -sLO https://github.com/Kitware/CMake/releases/download/v3.23.2/cmake-3.23.2-linux-x86_64.tar.gz &
 wait
 rm -rf ${DEP_ROOT}/{lib,include} || true
 mkdir -p ${DEP_ROOT}/Linux_x86_64_{Release,Debug}
-tar xf Linux_x86_64_1677480132_Release.tar.zst -C ${DEP_ROOT}/Linux_x86_64_Release &
-tar xf Linux_x86_64_1677480132_Debug.tar.zst -C ${DEP_ROOT}/Linux_x86_64_Debug &
+tar xf Linux_x86_64_1741248292_Release.tar.zst -C ${DEP_ROOT}/Linux_x86_64_Release &
+tar xf Linux_x86_64_1741248292_Debug.tar.zst -C ${DEP_ROOT}/Linux_x86_64_Debug &
 tar xf linux_fix.tar.zst -C ${TMPDIR}/Builder &
 tar xf cmake-3.23.2-linux-x86_64.tar.gz
 cp -RpP cmake-3.23.2-linux-x86_64/* /usr/local/ || true
